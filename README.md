@@ -12,6 +12,12 @@ npm install
 npm run dev
 ```
 
+## Run tests
+
+```bash
+npm run test
+```
+
 Default host: http://localhost:3000
 
 ## Endpoints
