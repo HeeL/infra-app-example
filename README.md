@@ -1,26 +1,7 @@
-TypeScript API application with infrastructure setups
+Example web server application with endpoints and infrastructure setups
 
-## Setup
+Structure:
 
-```bash
-npm install
-```
-
-## Run
-
-```bash
-npm run dev
-```
-
-## Run tests
-
-```bash
-npm run test
-```
-
-Default host: http://localhost:3000
-
-## Endpoints
-
-- /health - Health check endpoint
-- /test - Test endpoint with a json response
+- app - Main application code. See [README.md](app/README.md)
+- .github - Github actions for CI/CD ([workflows](.github/workflows/ci.yml))
+- infra - Infrastructure setup for the application
