@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   lint:
@@ -13,14 +13,14 @@ jobs:
       run:
         working-directory: ./app
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: './app/package-lock.json'
-      - run: npm ci
-      - run: npm run lint
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: './app/package-lock.json'
+    - run: npm ci
+    - run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -28,14 +28,14 @@ jobs:
       run:
         working-directory: ./app
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: './app/package-lock.json'
-      - run: npm ci
-      - run: npm test
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: './app/package-lock.json'
+    - run: npm ci
+    - run: npm test
 
   build:
     runs-on: ubuntu-latest
@@ -43,11 +43,11 @@ jobs:
       run:
         working-directory: ./app
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: './app/package-lock.json'
-      - run: npm ci
-      - run: npm run build
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: './app/package-lock.json'
+    - run: npm ci
+    - run: npm run build
