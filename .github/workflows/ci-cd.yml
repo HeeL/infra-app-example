@@ -71,5 +71,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t HeeL/infra-app-example:${{ github.sha }} .
-          docker push HeeL/infra-app-example:${{ github.sha }}
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/infra-app-example:${{ github.sha }} .
+          docker push ${{ secrets.DOCKER_USERNAME }}/infra-app-example:${{ github.sha }}
